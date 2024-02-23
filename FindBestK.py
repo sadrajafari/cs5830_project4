@@ -171,6 +171,7 @@ class FindBestK:
 
         self.best_K = {"mean_best": np.mean(best_Ks), "median_best": np.median(best_Ks), "mode_best": mode(best_Ks).mode[0]}
         print(f"{self.name} Best K: {self.best_K}")
+        plt.figure(figsize=(5, 5))
         sns.displot(data=best_Ks, kde=True)
         plt.title("Distribution of Best K Values")
         plt.xlabel("K Value")
